@@ -20,7 +20,7 @@ steps:
     jdkArchitectureOption: 'x64'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'https://pkgs.dev.azure.com/abkrish/_packaging/abkrish/maven/v1'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
     publishJUnitResults: true
