@@ -1,4 +1,5 @@
 # Maven
+
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -19,7 +20,7 @@ steps:
     jdkArchitectureOption: 'x64'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: 'https://pkgs.dev.azure.com/abkrish/_packaging/abkrish/maven/v1'
     ArtifactName: 'drop'
     publishLocation: 'Container'
     publishJUnitResults: true
